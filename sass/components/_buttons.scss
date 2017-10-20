@@ -1,0 +1,24 @@
+.submit-btn {
+    background-color: $red;
+    border: none;
+    color: $white !important;
+    cursor: pointer;
+    font-family: $nav-font;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: 1.5;
+    padding: .33em 1em .38em;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    @include display(inline-block);
+    @include transition(all .25s ease-out);
+    @include appearance(none);
+    @include user-select(none);
+    &:hover{
+      background:$red-hover;
+    }
+    &:focus{
+      background:$red-hover;
+    }
+}

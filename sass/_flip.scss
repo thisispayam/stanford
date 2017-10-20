@@ -1,0 +1,32 @@
+.flip-container {
+      perspective: 1000;
+      cursor:pointer;
+   }
+   .flip-container:hover .back {
+      @include transform(rotateY(0deg));
+   }
+   .flip-container:hover .front {
+       @include transform(rotateY(180deg));
+   }
+
+   .card {
+       @include transition-duration(0.6s);
+       @include transform-style(preserve-3d);
+       position: relative;
+   }
+   .front, .back {
+       @include backface-visibility(hidden);
+       @include transition-duration(0.6s);
+       @include transform-style(preserve-3d);
+       @include position(absolute, 1.8em null null -0.9em);
+   }
+   .front {
+       z-index: 2;
+       @include transform(rotateY(0deg));
+
+   }
+   .back {
+       z-index: 1;
+       @include transform(rotateY(-180deg));
+
+   }

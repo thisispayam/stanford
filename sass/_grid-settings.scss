@@ -1,0 +1,20 @@
+@import "bourbon-neat/app/assets/stylesheets/neat-helpers";
+// Custom the grid settings
+$column: 160px;
+$gutter: 32px;
+$grid-columns: 10;
+$max-width: 1920px;
+
+
+$xsmall : 320px;
+$small : 480px;
+$medium : 768px;
+$large : 1055px;
+$xlarge : 1200px;
+$xxlarge : 1280px;
+
+
+$tablet: new-breakpoint(max-width $small 8);
+$mobile: new-breakpoint(max-width $xsmall 4);
+$desktop: new-breakpoint(min-width $medium 12);
+$largedesktop: new-breakpoint(min-width $large 16);

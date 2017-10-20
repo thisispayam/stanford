@@ -1,0 +1,31 @@
+{
+  "name": "stanford",
+  "version": "1.0.0",
+  "description": "Stanford exercise",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thisispayam/stanford.git"
+  },
+  "author": "Payam Kazemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisispayam/stanford/issues"
+  },
+  "homepage": "https://github.com/thisispayam/stanford#readme",
+  "devDependencies": {
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^1.9.0",
+    "font-awesome": "^4.7.0",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

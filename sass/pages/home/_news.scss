@@ -1,0 +1,126 @@
+.news-section{
+
+  &__spotlight{
+
+    @include span-columns(9);
+    margin:auto;
+    @include display(flex);
+    @include justify-content(center);
+    position: relative;
+    overflow: hidden;
+     @include media($tablet) {
+        @include col-with-gutter(10);
+        @include flex-direction(column);
+     }
+  }
+  &__img {
+    @include col-with-gutter(5);
+    @include media($tablet) {
+        @include span-columns(10);
+    }
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    object-fit: cover;
+  }
+  &__description{
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    font-family: $font-default;
+    padding: 2em;
+    @include span-columns(10);
+    flex-basis:52%;
+      & h3{
+        margin-top:1em;
+      }
+      & h4{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.2em;
+        color:$news-title-color;
+      }
+      & p{
+        margin-top:1.5em;
+      }
+      & a{
+        margin-top:2em;
+        text-decoration: none;
+        color:$title-color;
+        &:hover{
+          color: $link-hover;
+        }
+      }
+  }
+  &__other{
+      @include display(flex);
+      @include outer-container;
+      @include span-columns(9);
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      position: relative;
+      overflow: hidden;
+      margin: 2em auto 0 auto;
+    &__col--6{
+      @include span-columns(5);
+      @include breakpoint(sm){
+        @include span-columns(10);
+      }
+      @include breakpoint(xs){
+        @include span-columns(10);
+      }
+    }
+    &__each{
+      overflow:hidden;
+      margin:2em 0;
+      @include display(flex);
+      @include breakpoint(xs){
+          @include span-columns(10);
+          @include flex-direction(column);
+      }
+    }
+    & img{
+      @include col-with-gutter(6);
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      max-height:185px;
+      @include breakpoint(xs){
+        @include span-columns(10);
+      }
+    }
+    &__description{
+      @include span-columns(10);
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      font-family: $font-default;
+      padding: 1em;
+      font-size: $news-other-font-size;
+        & h3{
+          margin-top:1em;
+        }
+        & h4{
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 1.2em;
+          color:$red-hover;
+        }
+        & p{
+          margin-top:1.5em;
+        }
+        & a{
+          text-decoration: none;
+          color:$title-color;
+          &:hover{
+            color: $link-hover;
+          }
+        }
+      }
+    }
+    &__readMore{
+      @include display(flex);
+      @include flex-basis(100%);
+      margin-top:3em;
+      & a{
+        margin:auto;
+        padding: 0.5em 4em;
+        font-size:1.1em;
+      }
+    }
+}

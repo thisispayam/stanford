@@ -1,0 +1,33 @@
+// common styling for each panel section
+.panel {
+  padding: 2em 0;
+  @include display(flex);
+  @include flex-wrap(wrap);
+    header{
+      margin:auto;
+      width:100%;
+      padding:2em 0 3em 0;
+      @include flex-direction(column);
+      text-align: center;
+      z-index: 0;
+        h2 {
+          font-family:$helvetica;
+          font-size: $section-header-font-size;
+          font-weight: bold;
+        }
+        p {
+          margin-top: .33em;
+          font-size: 1.5em;
+          font-family:$font-default;
+        }
+    }
+  &--vanilla{
+    background-color: $vanilla;
+  }
+  &--choco{
+    background-color: $choco;
+        h2, header p {
+          color:$vanilla;
+        }
+  }
+}

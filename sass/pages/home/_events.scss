@@ -1,0 +1,173 @@
+.events-section{
+
+  &__spotlight{
+
+    @include span-columns(9);
+    margin:auto;
+    @include display(flex);
+    @include justify-content(center);
+    position: relative;
+    height: 20em;
+    overflow: hidden;
+     @include breakpoint(md) {
+        @include span-columns(9);
+        @include display(flex);
+        @include flex-direction(row);
+        height: auto;
+        margin:auto;
+     }
+  }
+  &__date{
+    @include position(absolute, 1em 1em null null);
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-flow(row wrap);
+    @include align-content(center);
+    width: 4em;
+    height: 5em;
+    background: $choco;
+    color: $vanilla;
+      .month ,  .time {
+        display: block;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 1em;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
+      .day, .meridiem{
+        display: block;
+        font-weight: 600;
+        font-size: 1em;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
+      &--interactive{
+        position: absolute;
+        top: -0.5em;
+        left:2em;
+      }
+  }
+  &__img {
+    @include col-with-gutter (10);
+    @include breakpoint(sm) {
+      @include col-with-gutter (4);
+    }
+    @include breakpoint(xs) {
+        display:none;
+    }
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    object-fit: cover;
+  }
+  &__description{
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    font-family: $font-default;
+    padding: 2em 6em 2em 2em;
+    position:relative;
+    @include span-columns(10);
+    flex-basis:100%;
+      & h3{
+        margin-top:1em;
+      }
+      & h4{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.2em;
+        color:$news-title-color;
+      }
+      & p{
+        margin-top:1.5em;
+      }
+      & a{
+        margin-top:2em;
+        text-decoration: none;
+        color:$title-color;
+        &:hover{
+          color: $link-hover;
+        }
+      }
+  }
+  &__other{
+      @include display(flex);
+      @include outer-container;
+      @include span-columns(9);
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      position: relative;
+      overflow: hidden;
+      margin: 2em auto 0 auto;
+    &__col--6{
+      @include span-columns(5);
+      @include breakpoint(sm){
+        @include span-columns(10);
+      }
+    }
+    &__each{
+      overflow:hidden;
+      margin:2em 0;
+      @include display(flex);
+      @include breakpoint(xs){
+          @include span-columns(10);
+          @include flex-direction(column);
+      }
+    }
+    & img{
+      @include col-with-gutter(5);
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      max-height:185px;
+      @include breakpoint(md){
+        display:none;
+      }
+      @include breakpoint(xs){
+        @include span-columns(10);
+        display:none;
+      }
+    }
+    &__description{
+      @include span-columns(10);
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      font-family: $font-default;
+      padding: 1em 5em 1em 1em;
+      font-size: $news-other-font-size;
+      position:relative;
+      min-height: 8em;
+        & h3{
+          margin-top:1em;
+        }
+        & h4{
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 1.2em;
+          color:$red-hover;
+        }
+        & p{
+          margin-top:0.7em;
+          @include breakpoint(md){
+            display:none;
+          }
+        }
+        & a{
+          text-decoration: none;
+          color:$title-color;
+          &:hover{
+            color: $link-hover;
+          }
+        }
+      }
+    }
+    &__readMore{
+      @include display(flex);
+      @include flex-basis(100%);
+      margin-top:3em;
+      & a{
+        margin:auto;
+        padding: 0.5em 4em;
+        font-size:1.1em;
+      }
+    }
+}

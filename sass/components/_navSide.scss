@@ -1,0 +1,106 @@
+//Side navigation
+.nav-side{
+
+  &__items{
+    @include position(fixed, 0em 0em null null);
+    height: 100%;
+    width: 0;
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    background-color: $nav-side-bg;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 4em;
+  }
+  &__item {
+    list-style: none;
+    margin:0;
+    min-width:200px;
+    @include position(relative, null null null null);
+
+    > a {
+      padding: 1em;
+      text-align:center;
+      text-decoration: none;
+      font-size: $nav-side-font-size;
+      font-family: $helvetica;
+      color: $black;
+      position: relative;
+      @include transition(color .3s ease-in);
+      display: block;
+      &:after{
+        content: "";
+        @include position(absolute, null null 0 0);
+        width: 100%;
+        height: 3px;
+        background-color: $red;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        @include transition(all .15s ease-in);
+        z-index: 1;
+      }
+      &:hover{
+        color: $red;
+      }
+      &:hover:after{
+        visibility: visible;
+        @include transform(scale(1));
+        @include transition(all .25s ease-out);
+      }
+      &:focus{
+        color: $red;
+      }
+      &:focus:after{
+        visibility: visible;
+        @include transform(scale(1));
+        @include transition(all .25s ease-out);
+      }
+    }
+    &--content{
+       display: none;
+       position: relative;
+       top: 0;
+       min-width: 160px;
+       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       z-index: 1;
+       background: white;
+       margin-left: -0.55em;
+       & a{
+         float: none;
+         color: $black;
+         padding: 12px 32px;
+         text-decoration: none;
+         display: block;
+         text-align: right;
+         background:$white;
+         text-transform: uppercase;
+         font-size:$nav-dropdown-font-size;
+         font-family: $nav-font;
+         outline-offset: -4px;
+         &:hover{
+           background-color:$red;
+           color:$white;
+         }
+       }
+    }
+    &:hover &--content {
+       display: block;
+    }
+    &:focus &--content {
+       display: block;
+    }
+  }
+}
+#main {
+  @include transition(margin-right .5s);
+}
+.width-200{
+  width:200px;
+}
+.margin-r-200{
+  margin-right: 200px;
+  @include breakpoint(lg){
+    margin-right:0;
+  }
+}

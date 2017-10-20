@@ -1,0 +1,27 @@
+
+//base
+*{
+    @include box-sizing(border-box);
+    margin:0;
+    padding:0;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/*only available to screen readers*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
