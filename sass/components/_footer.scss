@@ -1,0 +1,10 @@
+.footer-section{
+  width:100%;
+  min-height:15em;
+  background: $vanilla;
+  @include display(flex);
+  p {
+      margin:auto;
+      color:$red-hover;
+  }
+}

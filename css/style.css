@@ -550,6 +550,20 @@ header {
     .panel--choco h2, .panel--choco header p {
       color: #f9f6ef; }
 
+.footer-section {
+  width: 100%;
+  min-height: 15em;
+  background: #f9f6ef;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .footer-section p {
+    margin: auto;
+    color: #820000; }
+
 .news-section__spotlight {
   float: left;
   display: block;
