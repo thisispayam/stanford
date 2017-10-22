@@ -16,9 +16,9 @@
     @include appearance(none);
     @include user-select(none);
     &:hover{
-      background:$red-hover;
+      background-color:$red-hover;
     }
     &:focus{
-      background:$red-hover;
+      background-color:$red-hover;
     }
 }

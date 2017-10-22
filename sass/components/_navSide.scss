@@ -3,8 +3,7 @@
 
   &__items{
     @include position(fixed, 0em 0em null null);
-    height: 100%;
-    width: 0;
+    @include wh(0,100%);
     z-index: -1;
     box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
     background-color: $nav-side-bg;
@@ -31,8 +30,7 @@
       &:after{
         content: "";
         @include position(absolute, null null 0 0);
-        width: 100%;
-        height: 3px;
+        @include wh(100%,3px);
         background-color: $red;
         visibility: hidden;
         -webkit-transform: scaleX(0);

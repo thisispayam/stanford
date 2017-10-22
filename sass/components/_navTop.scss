@@ -8,20 +8,11 @@ header{
   @include position(fixed, 0 null null 0);
   @include display(inline-block);
   background: $red;
-  width:100%;
-  height:auto;
+  @include wh(100%,auto);
   float:right;
   padding:0 4em;
   @include breakpoint(sm){
-    padding:0 2em;
-    min-height:3em;
-  }
-  @include breakpoint(xs){
-    padding:0 2em;
-    min-height:3em;
-  }
-  @include breakpoint(xxs){
-    padding:0 2em;
+    padding:0 2em 0 1em;
     min-height:3em;
   }
      a {
@@ -52,15 +43,7 @@ header{
       float:right;
       width:70%;
     }
-    @include breakpoint(md){
-      @include span-columns(10);
-      float:right;
-    }
     @include breakpoint(sm){
-      @include span-columns(10);
-      line-height: 1.8em;
-    }
-    @include breakpoint(xs){
       @include span-columns(10);
       line-height: 1.8em;
     }
@@ -119,13 +102,7 @@ header{
 
   }
   &__list{
-    @include breakpoint (sm){
-      display: none;
-    }
-    @include breakpoint (xs){
-      display: none;
-    }
-    @include breakpoint (xxs){
+    @include breakpoint (md){
       display: none;
     }
   }
@@ -138,7 +115,6 @@ header{
     }
     @include breakpoint(sm){
       @include position(absolute, -30px 0 null null);
-      float:right;
     }
     & li{
       list-style: none;

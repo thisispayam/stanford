@@ -99,9 +99,9 @@ html {
   -ms-user-select: none;
   user-select: none; }
   .submit-btn:hover {
-    background: #820000; }
+    background-color: #820000; }
   .submit-btn:focus {
-    background: #820000; }
+    background-color: #820000; }
 
 header {
   display: -webkit-box;
@@ -127,15 +127,7 @@ header {
   padding: 0 4em; }
   @media (max-width: 767px) {
     .nav-top {
-      padding: 0 2em;
-      min-height: 3em; } }
-  @media (max-width: 479px) {
-    .nav-top {
-      padding: 0 2em;
-      min-height: 3em; } }
-  @media (max-width: 319px) {
-    .nav-top {
-      padding: 0 2em;
+      padding: 0 2em 0 1em;
       min-height: 3em; } }
   .nav-top a {
     color: #fff;
@@ -178,25 +170,7 @@ header {
         width: 70%; }
         .nav-top__items:last-child {
           margin-right: 0; } }
-    @media (max-width: 1054px) {
-      .nav-top__items {
-        float: left;
-        display: block;
-        margin-right: 1.69492%;
-        width: 100%;
-        float: right; }
-        .nav-top__items:last-child {
-          margin-right: 0; } }
     @media (max-width: 767px) {
-      .nav-top__items {
-        float: left;
-        display: block;
-        margin-right: 1.69492%;
-        width: 100%;
-        line-height: 1.8em; }
-        .nav-top__items:last-child {
-          margin-right: 0; } }
-    @media (max-width: 479px) {
       .nav-top__items {
         float: left;
         display: block;
@@ -248,13 +222,7 @@ header {
         .nav-top__item--content a:hover {
           background-color: #b1040e;
           color: #fff; }
-  @media (max-width: 767px) {
-    .nav-top__list {
-      display: none; } }
-  @media (max-width: 479px) {
-    .nav-top__list {
-      display: none; } }
-  @media (max-width: 319px) {
+  @media (max-width: 1054px) {
     .nav-top__list {
       display: none; } }
   .nav-top__btns {
@@ -271,8 +239,7 @@ header {
       .nav-top__btns {
         position: absolute;
         top: -30px;
-        right: 0;
-        float: right; } }
+        right: 0; } }
     .nav-top__btns li {
       list-style: none;
       display: inline; }
@@ -331,8 +298,8 @@ header {
   position: fixed;
   top: 0em;
   right: 0em;
-  height: 100%;
   width: 0;
+  height: 100%;
   z-index: -1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.15);
   background-color: #fff;
@@ -451,7 +418,6 @@ header {
       -o-object-fit: cover;
          object-fit: cover;
       top: 50%;
-      margin: auto;
       -webkit-transform: none;
       transform: none; }
       @media (max-width: 767px) {
@@ -469,8 +435,8 @@ header {
       top: 40%;
       left: 50%;
       width: auto;
-      margin-left: 0;
       height: auto;
+      margin-left: 0;
       display: block;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;

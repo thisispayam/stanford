@@ -41,3 +41,9 @@
     @include span-columns($cols);
     margin-right: $gutter;
 }
+
+// width and height
+@mixin wh ($width:100%, $height:100%){
+  width:$width;
+  height:$height;
+}
