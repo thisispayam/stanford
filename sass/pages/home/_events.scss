@@ -72,7 +72,7 @@
       & h3{
         margin-top:1em;
       }
-      & h4{
+      & h4, .post-meta a{
         text-transform: uppercase;
         font-weight: 600;
         font-size: 1.2em;
@@ -119,12 +119,16 @@
       object-fit: cover;
       box-shadow: 0 0 10px rgba(0,0,0,.15);
       max-height:185px;
+      transition: all .3s ease-in;
       @include breakpoint(md){
         display:none;
       }
       @include breakpoint(xs){
         @include span-columns(10);
         display:none;
+      }
+      &:hover{
+        transform: scale(1.05);
       }
     }
     &__description{
@@ -139,7 +143,7 @@
         & h3{
           margin-top:1em;
         }
-        & h4{
+        & h4, .post-meta a{
           text-transform: uppercase;
           font-weight: 600;
           font-size: 1.2em;
