@@ -15,18 +15,16 @@
       display:none;
     }
   &__video {
-    @include position(relative, 42px null null 0);
+    position:relative;
     @include wh;
     object-fit: contain;
     vertical-align: baseline;
     display: inline-block;
+    top: 0;
     &[poster]{
         object-fit: cover;
-        top: 50%;
+        top: -5em;
         @include transform(none);
-        @include breakpoint(sm){
-          top:0px;
-        }
       }
   }
   &__title{
