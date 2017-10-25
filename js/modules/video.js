@@ -18,11 +18,6 @@
       video.oncanplay = function() {
         video.play();
       };
-
-  vid.oncanplay = function() {
-    alert("Can start playing video");
-};
-
       //on scroll
       var bgVideo = video[0];
       $(window).scroll(function(){
