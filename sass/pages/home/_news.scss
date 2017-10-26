@@ -71,6 +71,9 @@
       overflow:hidden;
       margin:2em 0;
       @include display(flex);
+      @include breakpoint(md){
+          @include flex-direction(column);
+      }
       @include breakpoint(xs){
           @include span-columns(10);
           @include flex-direction(column);
@@ -84,6 +87,9 @@
       box-shadow: 0 0 10px rgba(0,0,0,.15);
       max-height:185px;
       transition: all .3s ease-in;
+      @include breakpoint(md){
+          display:none;
+      }
       @include breakpoint(xs){
         @include span-columns(10);
       }

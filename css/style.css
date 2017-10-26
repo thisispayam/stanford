@@ -684,6 +684,15 @@ header {
     display: -ms-flexbox;
     display: flex;
     transition: all 1s; }
+    @media (max-width: 1054px) {
+      .news-section__other__each {
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-direction: normal;
+        box-direction: normal;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column; } }
     @media (max-width: 479px) {
       .news-section__other__each {
         float: left;
@@ -712,6 +721,9 @@ header {
     transition: all .3s ease-in; }
     .news-section__other img:last-child {
       margin-right: 0; }
+    @media (max-width: 1054px) {
+      .news-section__other img {
+        display: none; } }
     @media (max-width: 479px) {
       .news-section__other img {
         float: left;
