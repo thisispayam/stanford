@@ -25,6 +25,10 @@
         object-fit: cover;
         top: -5em;
         @include transform(none);
+        @include breakpoint(md){
+          overflow:visible;
+          top:0;
+        }
       }
   }
   &__title{

@@ -419,6 +419,10 @@ header {
       top: -5em;
       -webkit-transform: none;
       transform: none; }
+      @media (max-width: 1054px) {
+        .fullscreen-bg__video[poster] {
+          overflow: visible;
+          top: 0; } }
   .fullscreen-bg__title {
     color: #fff;
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
