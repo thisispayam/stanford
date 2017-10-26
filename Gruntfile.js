@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         dist: {
           src: ['js/modules/menu.js', 'js/modules/video.js', 'js/modules/functions.js'],
           dest: 'js/src/script.js',
-        },
+        }
       },
       uglify: { // Begin JS Uglify Plugin
         build: {

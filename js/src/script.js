@@ -20,6 +20,7 @@
 /******** background video logic *********/
 
  //play and pause the video on click or scroll
+
     //on click
       var video = $('.fullscreen-bg__video');
       var videoControls = $(".fullscreen-bg__playPause i");
@@ -33,15 +34,6 @@
           }
       });
 
-  //Check if video can play, and play it
-      video.oncanplay = function() {
-        video.play();
-      };
-
-  vid.oncanplay = function() {
-    alert("Can start playing video");
-};
-
       //on scroll
       var bgVideo = video[0];
       $(window).scroll(function(){
@@ -51,6 +43,11 @@
            scroll > 300 ? bgVideo.pause() : bgVideo.play()
          }
       });
+
+      //Check if video can play, and play it
+      video.oncanplay = function() {
+        video.play();
+      };
 /**************** Functions ***************/
 
       /* ACCESSIBILITY -- checks to see if the class 'expanded' exist,
